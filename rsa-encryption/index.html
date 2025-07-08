@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSA Encryption</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>RSA Encryption</h1>
+        
+        <div class="key-section">
+            <h2>Key Generation</h2>
+            <button id="generateKeys" class="btn">Generate New Keys</button>
+            <div class="key-display">
+                <div class="key-box">
+                    <h3>Public Key</h3>
+                    <p id="publicKey">Not generated yet</p>
+                </div>
+                <div class="key-box">
+                    <h3>Private Key</h3>
+                    <p id="privateKey">Not generated yet</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="encryption-section">
+            <h2>Text Encryption</h2>
+            <div class="input-group">
+                <label for="message">Message to Encrypt:</label>
+                <textarea id="message" rows="4" placeholder="Enter your message here..."></textarea>
+            </div>
+            <button id="encryptBtn" class="btn">Encrypt Text</button>
+            <div class="result-box">
+                <h3>Encrypted Message</h3>
+                <p id="encryptedResult">No encrypted message yet</p>
+            </div>
+        </div>
+
+        <div class="decryption-section">
+            <h2>Text Decryption</h2>
+            <div class="input-group">
+                <label for="ciphertext">Ciphertext to Decrypt:</label>
+                <textarea id="ciphertext" rows="4" placeholder="Enter ciphertext here..."></textarea>
+            </div>
+            <button id="decryptBtn" class="btn">Decrypt Text</button>
+            <div class="result-box">
+                <h3>Decrypted Message</h3>
+                <p id="decryptedResult">No decrypted message yet</p>
+            </div>
+        </div>
+
+        <div class="file-encryption-section">
+            <h2>File Encryption</h2>
+            <div class="input-group">
+                <label for="fileToEncrypt">Select File to Encrypt:</label>
+                <input type="file" id="fileToEncrypt" class="file-input">
+            </div>
+            <button id="encryptFileBtn" class="btn">Encrypt File</button>
+            <div class="result-box">
+                <h3>Encrypted File</h3>
+                <p id="encryptedFileStatus">No file encrypted yet</p>
+                <a id="downloadEncrypted" class="download-link" style="display: none;">Download Encrypted File</a>
+            </div>
+        </div>
+
+        <div class="file-decryption-section">
+            <h2>File Decryption</h2>
+            <div class="input-group">
+                <label for="fileToDecrypt">Select File to Decrypt:</label>
+                <input type="file" id="fileToDecrypt" class="file-input">
+            </div>
+            <button id="decryptFileBtn" class="btn">Decrypt File</button>
+            <div class="result-box">
+                <h3>Decrypted File</h3>
+                <p id="decryptedFileStatus">No file decrypted yet</p>
+                <a id="downloadDecrypted" class="download-link" style="display: none;">Download Decrypted File</a>
+            </div>
+        </div>
+    </div>
+    <script src="rsa_encryption.js"></script>
+</body>
+</html> 
